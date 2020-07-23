@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            imgHeader(context),
+            imgHeader(context: context,CountriesDAta: CountriesDAta),
            Padding(
              padding: const EdgeInsets.only(top: 15, bottom: 5),
              child: Row(
@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                  ),
                  GestureDetector(
                    onTap: (){
-                     Navigator.push(context, MaterialPageRoute(builder: (context)=>CountryPage()));
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=>CountryPage(CountriesData: CountriesDAta,)));
                    },
                    child: Container(
                      margin: EdgeInsets.only(right: 10),

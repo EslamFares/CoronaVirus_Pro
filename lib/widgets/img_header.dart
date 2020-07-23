@@ -1,13 +1,12 @@
 import 'dart:ui';
-
+import 'package:coronavirus_pro/screens/country_page.dart';
 import 'package:coronavirus_pro/screens/faqs.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../constants.dart';
 import '../data_source.dart';
 
-ClipPath imgHeader(BuildContext context) {
+ClipPath imgHeader({@required BuildContext context,@required List CountriesDAta}) {
   return ClipPath(
     clipper: MyClipper(),
     child: Container(
@@ -27,6 +26,17 @@ ClipPath imgHeader(BuildContext context) {
               child: Container(
                 color: Colors.black.withOpacity(.5),
               ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.topRight,
+            child: GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>CountryPage(CountriesData: CountriesDAta,)));
+              },
+              child: Container(
+                  margin: EdgeInsets.only(top: 30, right: 20),
+                  child: Icon(Icons.location_on,color: Colors.amber,size: 35,)),
             ),
           ),
           Align(
