@@ -1,6 +1,6 @@
 class DataSource {
   static String quote =
-      "Nothing in life is to be feared, it is only to \nbe understood. Now is the time to \nunderstand more,so that \nwe may fear less.";
+      "Nothing in life is to be feared, it is only to\nbe understood. Now is the time to \nunderstand more,so that \nwe may fear less.";
 
   static List questionAnswer = [
     {

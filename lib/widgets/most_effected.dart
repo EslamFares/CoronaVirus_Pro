@@ -22,7 +22,7 @@ padding: EdgeInsets.symmetric(horizontal: 3),
             return Container(
               margin: EdgeInsets.all(5),
               height: 50,
-
+width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   color: cSecColor,
                 borderRadius: BorderRadius.all(Radius.circular(10.0))
@@ -35,7 +35,7 @@ padding: EdgeInsets.symmetric(horizontal: 3),
                       height: 50,
                       child: Image.network(
                           countryData[index]['countryInfo']['flag'])),
-                  SizedBox(width: 20,),
+                  SizedBox(width: 5,),
                   Container(
                     width: width / 4.5,
                     child: Text(
@@ -43,7 +43,7 @@ padding: EdgeInsets.symmetric(horizontal: 3),
                       style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700),
                     ),
                   ),
-                  SizedBox(width: 20,),
+                  SizedBox(width: 5,),
                   Container(
                     width: width / 4,
                     child: Text(
@@ -51,7 +51,7 @@ padding: EdgeInsets.symmetric(horizontal: 3),
                       style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),
                     ),
                   ),
-                  SizedBox(width: 20,),
+                  SizedBox(width: 5,),
                   Container(
                     width: width / 4-5,
                     child: Text(

@@ -109,7 +109,7 @@ ClipPath imgHeader({@required BuildContext context,@required List CountriesDAta}
           Align(
             alignment: Alignment.center,
             child: Container(
-              width: MediaQuery.of(context).size.width - 70,
+              width: MediaQuery.of(context).size.width - 50,
               child: Center(
                 child: Text(
                   DataSource.quote,

@@ -42,7 +42,7 @@ class _CountryPageState extends State<CountryPage> {
                               topRight: Radius.circular(40.0)),
                           color: Colors.black54,
                         ),
-                        height: MediaQuery.of(context).size.height / 1.5,
+                        height: MediaQuery.of(context).size.height / 1.3,
                         child: Column(
                           children: <Widget>[
                             Container(
@@ -76,7 +76,7 @@ class _CountryPageState extends State<CountryPage> {
                                   textColor: Colors.redAccent,
                                   panelColor: Colors.redAccent.withOpacity(.6),
                                   width:
-                                      MediaQuery.of(context).size.width / 2.2,
+                                      MediaQuery.of(context).size.width / 2.5,
                                 ),
                               ],
                             ),
@@ -98,7 +98,7 @@ class _CountryPageState extends State<CountryPage> {
                                   textColor: Colors.grey,
                                   panelColor: Colors.grey,
                                   width:
-                                  MediaQuery.of(context).size.width / 2.2,
+                                  MediaQuery.of(context).size.width / 2.5,
                                 ),
                               ],
                             ),
@@ -120,7 +120,7 @@ class _CountryPageState extends State<CountryPage> {
                                   textColor: Colors.greenAccent,
                                   panelColor: Colors.greenAccent,
                                   width:
-                                  MediaQuery.of(context).size.width / 2.2,
+                                  MediaQuery.of(context).size.width / 2.5,
                                 ),
                               ],
                             ),
@@ -161,7 +161,7 @@ class _CountryPageState extends State<CountryPage> {
                             child: Image.network(
                                 CountriesDAta[index]['countryInfo']['flag'])),
                         SizedBox(
-                          width: 20,
+                          width: 5,
                         ),
                         Container(
                           width: width / 4.5,
@@ -173,7 +173,7 @@ class _CountryPageState extends State<CountryPage> {
                           ),
                         ),
                         SizedBox(
-                          width: 20,
+                          width: 5,
                         ),
                         Container(
                           width: width / 4,
@@ -185,7 +185,7 @@ class _CountryPageState extends State<CountryPage> {
                           ),
                         ),
                         SizedBox(
-                          width: 20,
+                          width: 5,
                         ),
                         Container(
                           width: width / 4 - 5,
