@@ -8,6 +8,8 @@ Pages
   <img src="https://github.com/EslamFares/CoronaVirus_Pro/blob/master/img_from_app/Screenshot_1595546636.png" width="300" /> 
   <img src="https://github.com/EslamFares/CoronaVirus_Pro/blob/master/img_from_app/Screenshot_1595546599.png" width="300" /> 
   <img src="https://github.com/EslamFares/CoronaVirus_Pro/blob/master/img_from_app/Screenshot_1595546594.png" width="300" /> 
+  <img src="https://github.com/EslamFares/CoronaVirus_Pro/blob/master/img_from_app/zz.jpg" width="300" /> 
+  <img src="https://github.com/EslamFares/CoronaVirus_Pro/blob/master/img_from_app/z.jpg" width="300" /> 
 </p>
 
 ## Getting Started
