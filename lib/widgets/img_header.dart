@@ -6,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../constants.dart';
 import '../data_source.dart';
 
+// ignore: non_constant_identifier_names
 ClipPath imgHeader({@required BuildContext context,@required List CountriesDAta}) {
   return ClipPath(
     clipper: MyClipper(),
