@@ -1,6 +1,9 @@
 import 'dart:ui';
 
+import 'package:coronavirus_pro/screens/faqs.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../constants.dart';
 import '../data_source.dart';
 
@@ -26,14 +29,64 @@ ClipPath imgHeader(BuildContext context) {
               ),
             ),
           ),
-
           Align(
             alignment: Alignment.topLeft,
             child: Container(
                 margin: EdgeInsets.only(top: 30, left: 20),
                 child: GestureDetector(
-                  onTap: () {
-                    print('oooooook');
+                  onTapUp: (details) {
+                    //==================== to return showMenu in spchial position ===========
+                    double dx = details.globalPosition.dx;
+                    double dy = details.globalPosition.dy;
+                    double dR = (MediaQuery.of(context).size.width) - dx;
+                    double dB = (MediaQuery.of(context).size.height) - dy;
+                    return showMenu(
+                      elevation: 10,
+                      color: cSecColor,
+                      context: context,
+                      position: RelativeRect.fromLTRB(dx, dy, dR, dB),
+                      items: <PopupMenuItem<String>>[
+                        PopupMenuItem<String>(
+                            child: GestureDetector(
+                              child: Text(
+                                'FQAS',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              onTap: () {
+                                Navigator.pop(context);
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>FqaPage()));
+                                print(1111111111111);
+                              },
+                            ),
+                            value: 'test1'),
+                        PopupMenuItem<String>(
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                                launch('https://covid19responsefund.org/en/');
+                                print('MYTH BUSTERS');
+                              },
+                              child: Text(
+                                'MYTH BUSTERS',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                            value: 'test2'),
+                        PopupMenuItem<String>(
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                                launch('https://www.who.int/indonesia/news/novel-coronavirus/mythbusters');
+                                print('DONATE');
+                              },
+                              child: Text(
+                                'DONATE',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                            value: 'test3'),
+                      ],
+                    );
                   },
                   child: Icon(
                     Icons.sort,
@@ -65,16 +118,6 @@ ClipPath imgHeader(BuildContext context) {
   );
 }
 
-void choiceAction(String choice) {
-  print('is CCCCCCCCCCCCClicked');
-}
-
-class ConstantsPOP {
-  static const String FAQs = 'FAQs';
-  static const String FAQs2 = 'FAQs2';
-  static const String FAQs3 = 'FAQs3';
-  static const List<String> choices = <String>[FAQs, FAQs2, FAQs3];
-}
 //====================================================
 
 class MyClipper extends CustomClipper<Path> {

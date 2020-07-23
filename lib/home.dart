@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:ui';
+import 'package:coronavirus_pro/screens/country_page.dart';
 import 'package:coronavirus_pro/widgets/img_header.dart';
 import 'package:coronavirus_pro/widgets/most_effected.dart';
 import 'package:coronavirus_pro/widgets/world_panel.dart';
@@ -73,20 +74,25 @@ class _HomePageState extends State<HomePage> {
                  SizedBox(
                    width: 10,
                  ),
-                 Container(
-                   margin: EdgeInsets.only(right: 5),
-                   height: 35,
-                   decoration: BoxDecoration(
-                       color: Colors.blue.withOpacity(.7),
-                       borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                   width: 100,
-                   child: Center(
-                     child: Text(
-                       'Regional',
-                       style: TextStyle(
-                           color: Colors.white,
-                           fontWeight: FontWeight.w600,
-                           fontSize: 16),
+                 GestureDetector(
+                   onTap: (){
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=>CountryPage()));
+                   },
+                   child: Container(
+                     margin: EdgeInsets.only(right: 10),
+                     height: 35,
+                     decoration: BoxDecoration(
+                         color: Colors.blue.withOpacity(.7),
+                         borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                     width: 100,
+                     child: Center(
+                       child: Text(
+                         'Regional',
+                         style: TextStyle(
+                             color: Colors.white,
+                             fontWeight: FontWeight.w600,
+                             fontSize: 16),
+                       ),
                      ),
                    ),
                  ),
